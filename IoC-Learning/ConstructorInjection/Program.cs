@@ -8,7 +8,7 @@ namespace ConstructorInjection
         static void Main(string[] args)
         {
             ILogger logger = new FileLogger();
-            var constructorInjectionLogger = new LoggingEngine(logger);
+            var constructorInjectionLogger = new LoggingEngine(logger); 
             constructorInjectionLogger.Log("Constructor Injection logging message");
 
         }
