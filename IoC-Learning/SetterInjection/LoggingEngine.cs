@@ -16,7 +16,7 @@ namespace SetterInjection
         /// <value>
         /// The logger.
         /// </value>
-        public ILogger Logger { get; internal set; }
+        public ILogger Logger { get; internal set; } = null;
 
         /// <summary>
         /// Logs the specified log message.
@@ -24,9 +24,12 @@ namespace SetterInjection
         /// <param name="logMessage">The log message.</param>
         internal void Log(string logMessage)
         {
-            Logger.OpenLog();
-            Logger.Log(logMessage);
-            Logger.CloseLog();
+            if (Logger != null)
+            {
+                Logger.OpenLog();
+                Logger.Log(logMessage);
+                Logger.CloseLog(); 
+            }
         }
     }
 }
