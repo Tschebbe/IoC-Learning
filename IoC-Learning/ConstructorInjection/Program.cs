@@ -1,16 +1,15 @@
-﻿using IoC_Learning;
-using Interfaces;
+﻿using Interfaces;
+using IoC_Learning;
 
 namespace ConstructorInjection
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             ILogger logger = new FileLogger();
-            var constructorInjectionLogger = new LoggingEngine(logger); 
+            var constructorInjectionLogger = new LoggingEngine(logger);
             constructorInjectionLogger.Log("Constructor Injection logging message");
-
         }
     }
 }

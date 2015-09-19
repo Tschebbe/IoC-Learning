@@ -3,9 +3,9 @@ using IoC_Learning;
 
 namespace SetterInjection
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             ILogger logger = new FileLogger();
 
@@ -13,8 +13,6 @@ namespace SetterInjection
 
             setterInjectionLogger.Logger = logger;
             setterInjectionLogger.Log("Setter Injection logging message");
-
-
         }
     }
 }

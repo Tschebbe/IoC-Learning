@@ -1,5 +1,4 @@
-﻿using System;
-using Interfaces;
+﻿using Interfaces;
 
 namespace SetterInjection
 {
@@ -28,7 +27,7 @@ namespace SetterInjection
             {
                 Logger.OpenLog();
                 Logger.Log(logMessage);
-                Logger.CloseLog(); 
+                Logger.CloseLog();
             }
         }
     }

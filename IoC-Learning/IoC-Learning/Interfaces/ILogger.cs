@@ -12,7 +12,7 @@
         /// </summary>
         /// <param name="logMsg">The log MSG.</param>
         void Log(string logMsg);
-        
+
         /// <summary>
         /// Closes the log.
         /// </summary>
